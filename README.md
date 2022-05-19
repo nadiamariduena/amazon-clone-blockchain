@@ -1,4 +1,4 @@
-### Build Amazon Web 3.0 Blockchain App with Solidity | Moralis | Next.js | Ethers.js | Tailwind CSS
+### [Build Amazon Web 3.0 Blockchain App with Solidity | Moralis | Next.js | Ethers.js | Tailwind CSS](https://youtu.be/HMdwbq1JJT0)
 
 👉 Building a Web 3.0 Application on the Ethereum Blockchain
 👉 Styling your app using Tailwind CSS

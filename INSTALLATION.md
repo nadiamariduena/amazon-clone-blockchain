@@ -33,3 +33,107 @@ npx create-next-app@latest .
 ###### Here you can see what happens when i remove the dot in the beginning
 
 [<img src="./img-read/dependencies0nextjs.gif"/>]()
+
+<br>
+<br>
+
+### 3. Create another folder
+
+- Inside the **amazon-clone-blockchain** create another folder
+
+```javascript
+mkdir smart-contracts
+```
+
+<br>
+<br>
+
+### 4. [Tailwind](https://tailwindcss.com/docs/installation)
+
+```javascript
+yarn add -D tailwindcss postcss autoprefixer
+// or
+npm i -D tailwindcss postcss autoprefixer
+```
+
+<br>
+
+#### 5. Now we need to initialize tailwind, run this:
+
+<br>
+
+```javascript
+ npx tailwindcss init -p
+```
+
+<br>
+<br>
+
+- 🔴 It will generate 2 files, **postcss.config.js** and **tailwind.config.js**
+
+ <br>
+
+#### In the files you will find something like this:
+
+<br>
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+//
+// postcss.config.js
+//
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+> ✋ Later on you will see how we can use them.
+
+<br>
+
+## tailwind configuration
+
+- Go to the **tailwind.config.js** and paste the following:
+
+```javascript
+
+ "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+```
+
+<br>
+
+#### Like so:
+
+```javascript
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+<br>
+
+#### Now go to the styles/globals.css, and paste the following code there:
+
+```javascript
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
