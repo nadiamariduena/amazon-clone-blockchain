@@ -105,3 +105,49 @@ export default MyApp;
 ```javascript
 npm run dev
 ```
+
+<br>
+<br>
+
+### Connect Button
+
+- Go to the **SideBar.js** and import the **web3uikit** library, this button will be ready to use.
+
+<br>
+
+- import the
+
+```javascript
+import { ConnectButton } from "web3uikit";
+```
+
+#### And use it like so
+
+```javascript
+import React from "react";
+import { ConnectButton } from "web3uikit";
+
+const SideBar = () => {
+  return (
+    <div>
+      <ConnectButton /> ✋
+    </div>
+  );
+};
+
+export default SideBar;
+```
+
+<br>
+
+#### The incredible of this button is that it has already some functionality, so if you click on it you will have some options, since I am using metamask, i will click on it.
+
+<br>
+
+[<img src="./img-read/button-web3uikit_1.gif"/>]()
+
+<br>
+
+#### after you click on metamask, you have to click to sign in "moralis"
+
+[<img src="./img-read/button-web3uikit_2.gif"/>]()

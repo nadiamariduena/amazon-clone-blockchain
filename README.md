@@ -257,3 +257,23 @@ export default SideBar;
 #### after you click on metamask, you have to click to sign in "moralis"
 
 [<img src="./img-read/button-web3uikit_2.gif"/>]()
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+### Now that you are logged in <u>Metamask</u>, go to <u>Moralis </u>
+
+- click on the arrow to unfold some options
+
+- click on the dashboard
+
+> Once you are in the dashboard, you will see that we have a user, and that is because every time we log in, it will count as a new user.
+
+<br>
+
+[<img src="./img-read/dashboard-.gif"/>]()
