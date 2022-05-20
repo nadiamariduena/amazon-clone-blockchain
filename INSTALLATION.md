@@ -132,8 +132,58 @@ module.exports = {
 
 #### Now go to the styles/globals.css, and paste the following code there:
 
-```javascript
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+
+
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  background: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
 ```
+
+<br>
+<br>
+
+#### At this point we are ready to launch the server to see if the app is working
+
+```javascript
+npm run dev
+```
+
+<br>
+<br>
+
+# 🌈
+
+## [Moralis](https://admin.moralis.io/servers)
+
+([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development)
+
+> **Moralis provides managed backend for blockchain projects.** Automatically syncing the balances of your users into the database, allowing you to set up on-chain alerts, watch smart contract events, build indexes, and so much more. All features are accessed through an easy-to-use SDK.
+
+#### Create an account there
+
+###### Check also [Moralis Metaverse](https://moralis.io/metaverse/)
+
+<br>
+
+#### Once you have your account setup, proceed to create the server in Moralis
+
+- at the left you will see a couple of options, right now we will be creating the server, so click on **servers** , then click on the green button and choose the **testnet server**
+
+<br>
+
+- ✋ when the form will open, you will add a name for the server, you will also **select a region** , choose the **testnet server** again and then for the **chain** select the **Rinkeby testnet**
+
+<br>
+
+[<img src="./img-read/moralis-1.gif"/>]()

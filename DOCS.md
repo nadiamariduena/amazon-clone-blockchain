@@ -156,3 +156,18 @@ SettleMint
 <br>
 
 #### Create an account there, once its ready, do the following:
+
+<br>
+<br>
+
+# 🌈
+
+## [Moralis](https://admin.moralis.io/servers)
+
+([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development)
+
+> **Moralis provides managed backend for blockchain projects.** Automatically syncing the balances of your users into the database, allowing you to set up on-chain alerts, watch smart contract events, build indexes, and so much more. All features are accessed through an easy-to-use SDK.
+
+#### Create an account there
+
+###### Check also [Moralis Metaverse](https://moralis.io/metaverse/)
