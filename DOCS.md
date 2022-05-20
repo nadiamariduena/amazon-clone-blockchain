@@ -138,7 +138,7 @@ SettleMint
  <br>
  <br>
 
-# INFURA 🌈
+## INFURA 🌈
 
 #### Another service that you will use is [INFURA](https://infura.io), infura is an API that runs ethereum clients for you.
 
@@ -169,53 +169,26 @@ SettleMint
 ([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development, so its going to make things much easier as it has already read made functions for that and more.)
 
 <br>
-<br>
-
+ 
 > **Moralis provides managed backend for blockchain projects.** Automatically syncing the balances of your users into the database, allowing you to set up on-chain alerts, watch smart contract events, build indexes, and so much more. All features are accessed through an easy-to-use SDK.
 
-#### Create an account there
-
-###### Check also [Moralis Metaverse](https://moralis.io/metaverse/)
-
-<br>
-
-#### Once you have your account setup, proceed to create the server in Moralis
-
-- at the left you will see a couple of options, right now we will be creating the server, so click on **servers** , then click on the green button and choose the **testnet server**
-
-<br>
-
-- 🔴 when the form will open, you will add a name for the server, you will also **select a region** , choose the **testnet server** again and then for the **chain** (the colorful icons) select the **Rinkeby testnet**
+##### Good to know [Moralis Metaverse](https://moralis.io/metaverse/)
 
 <br>
 
 [<img src="./img-read/moralis-1.gif"/>]()
 
 <br>
-
-#### As you can see here below, we will be using 3 things
-
 <br>
 
-- Server Url
-
-- Application Id
-
-- Master key
+---
 
 <br>
-
-[<img src="./img-read/moralis2.gif"/>]()
-
 <br>
 
-> What you see at the end of the gif is a dashboard, there we will see the sensitive data related to the user (later on)
+## <u>WalletConnect</u>
 
-<br>
-
-<br>
-
-### What is <u>WalletConnect</u> used for?
+### What is WalletConnect used for?
 
 WalletConnect is an open protocol for connecting desktop Dapps to mobile Wallets using end-to-end encryption by scanning a QR code. Opening up a whole world of Dapps that were once only available to Metamask.
 
