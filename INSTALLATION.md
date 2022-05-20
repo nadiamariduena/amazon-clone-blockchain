@@ -171,6 +171,7 @@ npm run dev
 ([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development, so its going to make things much easier as it has already read made functions for that and more.)
 
 <br>
+<br>
 
 > **Moralis provides managed backend for blockchain projects.** Automatically syncing the balances of your users into the database, allowing you to set up on-chain alerts, watch smart contract events, build indexes, and so much more. All features are accessed through an easy-to-use SDK.
 
@@ -210,4 +211,146 @@ npm run dev
 
 <br>
 
-#### What you see at the end of the gif is a dashboard, there we will see the sensitive data related to the user (later on)
+> What you see at the end of the gif is a dashboard, there we will see the sensitive data related to the user (later on)
+
+<br>
+
+<br>
+
+### After the account and the new project was created, intall the moralis dependencies:
+
+<br>
+
+```javascript
+yarn add moralis react-moralis
+// or
+npm i moralis react-moralis
+```
+
+<br>
+
+- after that you should have this
+
+```javascript
+  "dependencies": {
+    "moralis": "^1.7.0", ✋
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-moralis": "^1.3.5" ✋
+  },
+```
+
+<br>
+<br>
+
+# :watermelon:
+
+### Install the icons, spinners, modal
+
+```javascript
+npm i react-icons react-spinners react-simple-hook-modal
+```
+
+<br>
+
+# 🍨
+
+### Wallet connect / web3auth ethers
+
+<br>
+
+```javascript
+npm i @walletconnect/web3-provider @web3auth/web3auth ethers
+```
+
+<br>
+
+### What is <u>WalletConnect</u> used for?
+
+WalletConnect is an open protocol for connecting desktop Dapps to mobile Wallets using end-to-end encryption by scanning a QR code. Opening up a whole world of Dapps that were once only available to Metamask.
+
+<br>
+
+#### What is a web3 provider?
+
+- **Web3 providers, also known as Node providers**, are essentially blockchain data keepers. These projects run networks of hundreds of blockchain nodes, and are tasked with providing applications with the latest and historical blockchain data. The Web3 provider is an essential part of a blockchain-powered application
+
+##### Read more here: [The Importance of Web3 Provider Redundancy](https://blog.quicknode.com/the-importance-of-web3-provider-redundancy/)
+
+<br>
+
+#### What is <u>Ethers</u> ?
+
+The ethers.js library aims to be a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem. It was originally designed for use with ethers.io and has since expanded into a more general-purpose library.
+
+<br>
+
+##### After the installation, You should have this:
+
+```javascript
+ "dependencies": {
+    "@walletconnect/web3-provider": "^1.7.8", ✋
+    "@web3auth/web3auth": "^1.0.0-alpha.0", ✋
+    "ethers": "^5.6.6", ✋
+    "moralis": "^1.7.0",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1",
+    "react-moralis": "^1.3.5",
+    "react-simple-hook-modal": "^1.1.0",
+    "react-spinners": "^0.12.0"
+  },
+```
+
+<br>
+<br>
+
+# 🍨
+
+## Install <u>magic sdk </u> / moment / web3uikit
+
+```javascript
+npm i magic-sdk moment web3uikit
+```
+
+<br>
+
+### [Magic](https://magic.link) SDK
+
+> [Magic](https://magic.link/docs?utm_term=development%20kit&utm_campaign=New+website+clicks+campaign&utm_source=adwords&utm_medium=ppc&hsa_acc=7367440521&hsa_cam=13250211335&hsa_grp=125623972231&hsa_ad=523835832850&hsa_src=g&hsa_tgt=kwd-21353726&hsa_kw=development%20kit&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjw-JyUBhCuARIsANUqQ_Kysd6a8zuhwPEztViI1ePysfJoZWPp1uWyDwBWvIz8wKSDsc40RSMaAqkoEALw_wcB) is a developer SDK that integrates with your application **to enable passwordless Web3 onboarding (no seed phrases) and authentication using magic links (similar to Slack and Medium)** ✋. Magic enables blazing-fast, hardware-secured, passwordless login, Web3 onboarding, and access to over 20 blockchains with a few lines of code — even if you have an existing auth solution.
+
+<br>
+
+
+### [Web3UI Kit](https://github.com/web3ui/web3uikit)
+
+<br>
+
+Lightweight reusable Web3 UI components for dapps developers. Web3UIKit accelerates your dapp development and empowers you to build beautiful dapps.
+
+See how it works here [Web3UI Kit](https://github.com/web3ui/web3uikit)
+
+[<img src="./img-read/web3ui-kit.png"/>]()
+
+#### After the installation, You should have this:
+
+```javascript
+  "dependencies": {
+    "@walletconnect/web3-provider": "^1.7.8",
+    "@web3auth/web3auth": "^1.0.0-alpha.0",
+    "ethers": "^5.6.6",
+    "magic-sdk": "^8.1.1",
+    "moment": "^2.29.3",
+    "moralis": "^1.7.0",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1",
+    "react-moralis": "^1.3.5",
+    "react-simple-hook-modal": "^1.1.0",
+    "react-spinners": "^0.12.0",
+    "web3uikit": "^0.1.149"
+  },
+```
