@@ -1,3 +1,8 @@
+### The following dependencies is what we will be using for this project:
+
+<br>
+<br>
+
 ### [NomicLabs](https://nomic.foundation) / [hardhad](https://hardhat.org)
 
 <br>
