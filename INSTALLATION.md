@@ -333,6 +333,18 @@ See how it works here [Web3UI Kit](https://github.com/web3ui/web3uikit)
 
 [<img src="./img-read/web3ui-kit.png"/>]()
 
+<br>
+<br>
+
+## Moment 📅
+
+> Parse, validate, manipulate, and display dates in javascript.
+
+#### See an example here: [momentjs.com](https://momentjs.com)
+
+<br>
+<br>
+
 #### After the installation, You should have this:
 
 ```javascript
