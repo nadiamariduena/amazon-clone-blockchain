@@ -166,7 +166,11 @@ npm run dev
 
 ## [Moralis](https://admin.moralis.io/servers)
 
-([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development)
+<br>
+
+([Moralis](https://admin.moralis.io/servers) is like the firebase of crypto development, so its going to make things much easier as it has already read made functions for that and more.)
+
+<br>
 
 > **Moralis provides managed backend for blockchain projects.** Automatically syncing the balances of your users into the database, allowing you to set up on-chain alerts, watch smart contract events, build indexes, and so much more. All features are accessed through an easy-to-use SDK.
 
@@ -182,8 +186,28 @@ npm run dev
 
 <br>
 
-- ✋ when the form will open, you will add a name for the server, you will also **select a region** , choose the **testnet server** again and then for the **chain** select the **Rinkeby testnet**
+- 🔴 when the form will open, you will add a name for the server, you will also **select a region** , choose the **testnet server** again and then for the **chain** (the colorful icons) select the **Rinkeby testnet**
 
 <br>
 
 [<img src="./img-read/moralis-1.gif"/>]()
+
+<br>
+
+#### As you can see here below, we will be using 3 things
+
+<br>
+
+- Server Url
+
+- Application Id
+
+- Master key
+
+<br>
+
+[<img src="./img-read/moralis2.gif"/>]()
+
+<br>
+
+#### What you see at the end of the gif is a dashboard, there we will see the sensitive data related to the user (later on)
