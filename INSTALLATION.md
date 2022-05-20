@@ -344,7 +344,6 @@ See how it works here [Web3UI Kit](https://github.com/web3ui/web3uikit)
 #### See an example here: [momentjs.com](https://momentjs.com)
 
 <br>
-<br>
 
 #### After the installation, You should have this:
 
