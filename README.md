@@ -420,9 +420,12 @@ export default SideBar;
 
 ```
 
+<br>
+<br>
+
 ### At the end you will have something like this:
 
-- 🌵 in case we have a user logged i, we will show something that says welcome but **only until we have the rest of the content**
+- 🌵 in case we have a user logged i, we will show something that says <u>welcome jey</u> but **only until we have the rest of the content**
 
 ```javascript
 {
