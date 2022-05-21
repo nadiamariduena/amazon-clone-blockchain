@@ -266,14 +266,23 @@ export default SideBar;
 <br>
 <br>
 
-### Now that you are logged in <u>Metamask</u>, go to <u>Moralis </u>
+##### 1. log into Moralis
 
-- click on the arrow to unfold some options
+##### 2. Click on the button we just added in our app
 
-- click on the dashboard
+##### 3. Log in Metamask
 
-> Once you are in the dashboard, you will see that we have a user, and that is because every time we log in, it will count as a new user.
+##### 4. While logged in Metamask, click in the signin Moralis (through the popup window of the metamask)
 
+##### 5. Go to Moralis (click on the arrow to unfold some options)
+
+##### 6. click on the dashboard
+
+##### 7. Once you are in the dashboard
+
+> you will see that we have a user, and that is because every time we log in(**by clicking on the button** we just added), it will count as a new user. 🌈
+
+<br>
 <br>
 
 [<img src="./img-read/dashboard-.gif"/>]()
