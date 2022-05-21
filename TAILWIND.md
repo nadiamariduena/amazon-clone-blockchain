@@ -32,3 +32,11 @@ export default function Home() {
 ```
 
 #### flex settings [flex](https://tailwindcss.com/docs/flex)
+
+<br>
+
+### Gradients
+
+```javascript
+bg-gradient-to-t from-[#0d141c] to-[#42667e]
+```

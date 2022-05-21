@@ -334,7 +334,7 @@ export default SideBar;
 - ⚠️ At this point we will have some errors but dont mind, we will solve it in the next step **(the errors are due to the classnames, since we dont have them yet )**
 
 ```javascript
-import Image from "next/Image";
+import Image from "next/image";
 import React from "react";
 
 import { ConnectButton } from "web3uikit";
@@ -427,6 +427,12 @@ export default SideBar;
 
 - 🌵 in case we have a user logged i, we will show something that says <u>welcome jey</u> but **only until we have the rest of the content**
 
+<br>
+
+⚠️ DOnt mind about the styles, we will take care of them later
+
+<br>
+
 ```javascript
 {
   isAuthenticated && (
@@ -467,4 +473,136 @@ export default SideBar;
     </>
   );
 }
+```
+
+<br>
+<br>
+
+### Styles
+
+- Inside the **profile** we have the **gradient** that gives the bluish color to the box
+
+```javascript
+
+const SideBar = () => {
+  //
+  //
+
+  const styles = {
+    container: `h-full w-[300px] flex flex-col bg-[#fff] static`,
+    profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-t from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-[#fb9701]`,
+    profilePicContainer: `flex  rounded-xl items-center justify-center w-full h-full mb-5`,
+    profilePic: `rounded-3xl object-cover`,
+    welcome: ` text-md mb-2 font-bold text-2xl text-white`,
+  };
+
+  //
+  //
+  return (
+```
+
+<br>
+<br>
+
+### 🔴 If at this point you dont have anything in your browser (no boxes)
+
+- Test if everything is okay by typing "hallo" here:
+
+```javascript
+  <div className={styles.profile}>
+        hallo
+        {isAuthenticated && (
+          <>
+```
+
+<br>
+
+#### 🌈 if you see the text hallo showing, then its something else, probably the tailwind config
+
+- Go to the **tailwind.config.js**
+
+```javascript
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+<br>
+<br>
+
+### the code, before we continue
+
+- I added a variable called **username**, check the yellow hands to see where I use it
+
+```javascript
+import Image from "next/image";
+import React from "react";
+
+import { ConnectButton } from "web3uikit";
+//
+//
+
+const isAuthenticated = false;
+//
+const username = "jesssos"; ✋
+//
+//
+const SideBar = () => {
+  //
+  //
+
+  const styles = {
+    container: `h-full w-[300px] flex flex-col bg-[#fff] static`,
+    profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-t from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-[#fb9701]`,
+    profilePicContainer: `flex  rounded-xl items-center justify-center w-full h-full mb-5`,
+    profilePic: `rounded-3xl object-cover`,
+    welcome: ` text-md mb-2 font-bold text-2xl text-white`,
+  };
+
+  //
+  //
+  return (
+    <div className={styles.container}>
+      <div className={styles.profile}>
+        hello
+        {isAuthenticated && (
+          <>
+            <div className={styles.profilePicContainer}>
+              <Image
+                src={`https://avatars.dicebear.com/api/pixel-art/${username}.svg`} ✋
+                alt="profile"
+                className={styles.profilePic}
+                height={100}
+                width={100}
+              />
+            </div>
+            {!username ? (
+              <>
+                <div className={styles.username}>
+                  <input
+                    type="text"
+                    placeholder="Username...."
+                    className={styles.usernameInput}
+                  />
+                </div>
+                <button className={styles.setNickname}>Set Nickname</button>
+              </>
+            ) : (
+              <div>
+                <div className={styles.welcome}>Welcome {username}</div> ✋
+              </div>
+            )}
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
 ```
