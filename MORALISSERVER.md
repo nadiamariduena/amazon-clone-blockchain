@@ -151,3 +151,91 @@ export default SideBar;
 #### after you click on metamask, you have to click to sign in "moralis"
 
 [<img src="./img-read/button-web3uikit_2.gif"/>]()
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+### Connect Button
+
+- Go to the **SideBar.js** and import the **web3uikit** library, this button will be ready to use.
+
+<br>
+
+- import the
+
+```javascript
+import { ConnectButton } from "web3uikit";
+```
+
+#### And use it like so
+
+```javascript
+import React from "react";
+import { ConnectButton } from "web3uikit";
+
+const SideBar = () => {
+  return (
+    <div>
+      <ConnectButton /> ✋
+    </div>
+  );
+};
+
+export default SideBar;
+```
+
+<br>
+
+> 💯 **The incredible of this button, is that it has already some functionality!!!**, so if you click on it you will have some options(_since I am using metamask, i will click on it._)
+
+<br>
+
+[<img src="./img-read/button-web3uikit_1.gif"/>]()
+
+<br>
+
+#### after you click on metamask, you have to click to sign in "moralis" (you cannot really see it on the image, but you have to click in the blue button that is on the side of the cancel button)
+
+[<img src="./img-read/button-web3uikit_2.gif"/>]()
+
+<br>
+
+> You will see that we have a user, and that is because every time we log in(**by clicking on the button** we just added), it will count as a new user. 🌈
+
+<br>
+<br>
+
+## To recap 🥭
+
+##### 1. log into Moralis
+
+##### 2. Click on the button we just added in our app
+
+##### 3. Log in Metamask
+
+##### 4. While logged in Metamask, click in the signin Moralis (through the popup window of the metamask)
+
+##### 5. Go to Moralis (click on the arrow to unfold some options)
+
+##### 6. click on the dashboard
+
+##### 7. Once you are in the dashboard
+
+> you will see that we have a user, and that is because every time we log in(**by clicking on the button** we just added), it will count as a new user. 🌈
+
+<br>
+<br>
+
+[<img src="./img-read/dashboard-.gif"/>]()
+
+<br>
+<br>
+---
+
+<br>
+<br>

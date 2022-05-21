@@ -246,7 +246,7 @@ export default SideBar;
 
 <br>
 
-#### The incredible of this button is that it has already some functionality, so if you click on it you will have some options, since I am using metamask, i will click on it.
+> 💯 **The incredible of this button, is that it has already some functionality!!!**, so if you click on it you will have some options(_since I am using metamask, i will click on it._)
 
 <br>
 
@@ -254,17 +254,18 @@ export default SideBar;
 
 <br>
 
-#### after you click on metamask, you have to click to sign in "moralis"
+#### after you click on metamask, you have to click to sign in "moralis" (you cannot really see it on the image, but you have to click in the blue button that is on the side of the cancel button)
 
 [<img src="./img-read/button-web3uikit_2.gif"/>]()
 
 <br>
+
+> You will see that we have a user, and that is because every time we log in(**by clicking on the button** we just added), it will count as a new user. 🌈
+
+<br>
 <br>
 
----
-
-<br>
-<br>
+## To recap 🥭
 
 ##### 1. log into Moralis
 
@@ -286,3 +287,86 @@ export default SideBar;
 <br>
 
 [<img src="./img-read/dashboard-.gif"/>]()
+
+<br>
+<br>
+---
+
+<br>
+<br>
+
+### Go to the SideBar.js
+
+- declare the following variable, this variable will be related to **Moralis**
+
+```javascript
+const isAuthenticated = false;
+```
+
+#### We will be wrapping some stuff inside the isAuthenticated
+
+```javascript
+//
+//    ** BEFORE **
+//
+import React from "react";
+import { ConnectButton } from "web3uikit";
+//
+//
+
+const isAuthenticated = false;
+
+//
+//
+const SideBar = () => {
+  return (
+    <div>
+      <ConnectButton />
+    </div>
+  );
+};
+
+export default SideBar;
+```
+
+### process
+
+- ⚠️ At this point we will have some errors but dont mind, we will solve it in the next step **(the errors are due to the classnames, since we dont have them yet )**
+
+```javascript
+import Image from "next/Image";
+import React from "react";
+
+import { ConnectButton } from "web3uikit";
+//
+//
+
+const isAuthenticated = false;
+
+//
+//
+const SideBar = () => {
+  return (
+    <div className={styles.container}>
+      <div className={styles.profile}>
+        {isAuthenticated && (
+          <>
+            <div className={styles.profilePicContainer}>
+              <Image
+                alt="profile"
+                className={styles.profilePic}
+                height={100}
+                width={100}
+              />
+            </div>
+          </>
+        )}
+      </div>
+
+      <ConnectButton />
+    </div>
+  );
+};
+
+export default SideBar;
+```
