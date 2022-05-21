@@ -23,6 +23,31 @@ const SideBar = () => {
                 width={100}
               />
             </div>
+            {!username ? (
+              <>
+                {/* if we dont have user logged,
+               show this input form: */}
+                <div className={styles.username}>
+                  <input
+                    type="text"
+                    placeholder="Username..."
+                    className={usernameInput}
+                  />
+                </div>
+                <button
+                  className={styles.setNickname}
+                  // onClick = {handleSetUsername}
+                >
+                  Set Nickname
+                </button>
+              </>
+            ) : (
+              <>
+                {/* if we have a user logged,
+               show this: */}
+                <div className={styles.welcome}>Welcome jey</div>
+              </>
+            )}
           </>
         )}
       </div>

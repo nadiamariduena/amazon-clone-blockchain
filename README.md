@@ -370,3 +370,98 @@ const SideBar = () => {
 
 export default SideBar;
 ```
+
+### Conditionals
+
+- **By default we dont have an user name** (when you eneter a page you are never logged in, later on you click on login, there comes this question)
+
+<br>
+
+#### So if there is not user name, we want to do something...
+
+```javascript
+{!username ? ( ) : ( )} //✋
+// {!username ? (if we dont have an username we will do this) : (if we have it, we will do this)}
+```
+
+<br>
+
+#### If we dont have a username logged then of course we want to show a form "input", to give the user the option to log in
+
+- We dont have this yet **onClick = {handleSetUsername}** that is why its hidden
+
+<br>
+
+```javascript
+{!username ? (
+//
+//
+<>
+ {/*✋ if we dont have user logged,
+  show this input form:  */}
+ <div className={styles.username}>
+       <input
+        type="text"
+        placeholder="Username..."
+        className={usernameInput}
+        />
+  </div>
+       <button
+         className={styles.setNickname}
+         // 🍭 onClick = {handleSetUsername}
+                >
+        Set Nickname
+        </button>
+              </>
+              //
+              //
+
+) : ( )} //✋
+
+```
+
+### At the end you will have something like this:
+
+- 🌵 in case we have a user logged i, we will show something that says welcome but **only until we have the rest of the content**
+
+```javascript
+{
+  isAuthenticated && (
+    <>
+      <div className={styles.profilePicContainer}>
+        <Image
+          alt="profile"
+          className={styles.profilePic}
+          height={100}
+          width={100}
+        />
+      </div>
+      {!username ? (
+        <>
+          {/* ✋ if we dont have user logged,
+               show this input form: */}
+          <div className={styles.username}>
+            <input
+              type="text"
+              placeholder="Username..."
+              className={usernameInput}
+            />
+          </div>
+          <button
+            className={styles.setNickname}
+            // 🍭 onClick = {handleSetUsername}
+          >
+            Set Nickname
+          </button>
+        </>
+      ) : (
+        <>
+          {/* 🌵 if we have a user logged,
+               show this: */}
+          <div className={styles.welcome}>Welcome jey</div>
+        </>
+      )}
+    </>
+  );
+}
+```
