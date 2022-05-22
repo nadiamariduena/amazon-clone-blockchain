@@ -644,6 +644,10 @@ module.exports = nextConfig;
 ```
 
 <br>
+
+- As you can see, this is what we just added in the url for the image **"avatars.dicebear.com",**
+
+<br>
 <br>
 
 #### before and after
@@ -683,5 +687,16 @@ module.exports = nextConfig
 
 */
 ```
+
+<br>
+
+<br>
+
+[<img src="./img-read/icon-dicebar.gif"/>]()
+
+<br>
+<br>
+
+---
 
 <br>

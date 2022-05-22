@@ -5,9 +5,9 @@ import { ConnectButton } from "web3uikit";
 //
 //
 
-const isAuthenticated = false;
+const isAuthenticated = true;
 //
-const username = "jesssos";
+const username = "plop";
 //
 //
 const SideBar = () => {
