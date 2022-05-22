@@ -537,9 +537,11 @@ module.exports = {
 <br>
 <br>
 
-### the code, before we continue
+### the code before we continue 🥭
 
 - I added a variable called **username**, check the yellow hands to see where I use it
+
+<br>
 
 ```javascript
 import Image from "next/image";
@@ -560,7 +562,9 @@ const SideBar = () => {
 
   const styles = {
     container: `h-full w-[300px] flex flex-col bg-[#fff] static`,
+    // Gradient ---
     profile: ` w-full py-16 flex flex-col justify-center items-center rounded-r-3xl bg-gradient-to-t from-[#0d141c] to-[#42667e] mt-[40px] mb-[50px] border-2 border-[#fb9701]`,
+    // ------------
     profilePicContainer: `flex  rounded-xl items-center justify-center w-full h-full mb-5`,
     profilePic: `rounded-3xl object-cover`,
     welcome: ` text-md mb-2 font-bold text-2xl text-white`,
@@ -606,3 +610,78 @@ const SideBar = () => {
   );
 };
 ```
+
+<br>
+<br>
+
+# 🌵
+
+### Now add the following inside the <u>next.config.js</u>
+
+<br>
+
+- So here we need and images key with an **object** and a domain with an **array**
+
+```javascript
+/** @type {import('next').NextConfig} */ const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: [
+      "lh3.googleusercontent.com",
+      "openseauserdata.com",
+      "brand.assets.adidas.com",
+      "media0.giphy.com",
+      "avatars.dicebear.com",
+      "media1.giphy.com",
+      "media3.giphy.com",
+      "media2.giphy.com",
+      "media4.giphy.com",
+    ],
+  },
+};
+
+module.exports = nextConfig;
+```
+
+<br>
+<br>
+
+#### before and after
+
+<br>
+
+```javascript
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+};
+
+module.exports = nextConfig;
+
+/*
+
+
+  @type {import('next').NextConfig}   const nextConfig = {  reactStrictMode: true,
+  images: {
+    domains: [
+      'lh3.googleusercontent.com',
+      'openseauserdata.com',
+      'brand.assets.adidas.com',
+      'media0.giphy.com',
+      'avatars.dicebear.com',
+      'media1.giphy.com',
+      'media3.giphy.com',
+      'media2.giphy.com',
+      'media4.giphy.com',
+    ],
+  },
+}
+
+module.exports = nextConfig
+
+
+
+*/
+```
+
+<br>
