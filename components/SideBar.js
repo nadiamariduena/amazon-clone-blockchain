@@ -4,6 +4,13 @@ import Link from "next/link";
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
 //
+//  ----   ICONS ----
+import { FaBox } from "react-icons/fa";
+import { BsFillBookmarkFill } from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
+import { AiOutlineHistory } from "react-icons/ai";
+//
+//
 import { ConnectButton } from "web3uikit";
 //
 //
@@ -69,6 +76,7 @@ const SideBar = () => {
         {/* ----- */}
       </div>
       <div className={styles.menu}>
+        {/* amazon */}
         <Link href="/">
           <div className={styles.menuItem}>
             <Image
@@ -76,9 +84,34 @@ const SideBar = () => {
               height={30}
               width={30}
               className={styles.amazonLogo}
-            />
+            />{" "}
+            My Amazon <br /> board
           </div>
         </Link>
+        {/* icons */}
+        <div className={styles.menuItem}>
+          <FaBox />
+          Collections
+        </div>
+        <div className={styles.menuItem}>
+          <BsFillBookmarkFill />
+          Saved
+        </div>
+        <div className={styles.menuItem}>
+          <BsFillPersonFill />
+          Profile
+        </div>
+        {/* recent order  HISTORY */}
+        <Link href="/history">
+          <div className={styles.menuItem}>
+            <AiOutlineHistory />
+            Transaction History
+          </div>
+        </Link>
+        {/* company name */}
+        <div className={styles.companyName}>
+          <Image src={logoFull} alt="amazon" height={100} width={100} />
+        </div>
       </div>
     </div>
   );
