@@ -273,6 +273,22 @@ import { ConnectButton } from "web3uikit";
 [<img src="./img-read/menu-items-sidebar.gif"/>]()
 
 <br>
+<br>
+
+### Add the styles to the icons 🌈
+
+```javascript
+    menu: `flex flex-col w-full h-full px-10 gap-10`,
+    menuItem: `flex items-center text-lg font-bold cursor-pointer gap-2`,
+    amazonLogo: `mr-4 flex object-cover`,
+    companyName: `text-lg font-bold flex flex-1 pl-10 items-center mt-[20px]`,
+    setNickname: `text-lg font-bold flex flex-1 items-center mt-[20px] mb-[20px] text-white`,
+```
+
+[<img src="./img-read/menu-items-sidebar-styles.gif"/>]()
+
+<br>
+<br>
 
 #### This is what we have:
 

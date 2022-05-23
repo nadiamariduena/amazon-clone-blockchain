@@ -32,6 +32,12 @@ const SideBar = () => {
     welcome: ` text-md mb-2 font-bold text-2xl text-white`,
     usernameInput: `bg-transparent border-white border-2 rounded-lg w-[80%] py-2 px-4 text-lg mt-[20px] placeholder:text-white focus:outline-none flex justify-center items-center text-white`,
     username: `flex items-center w-full justify-center`,
+    //
+    menu: `flex flex-col w-full h-full px-10 gap-10`,
+    menuItem: `flex items-center text-lg font-bold cursor-pointer gap-2`,
+    amazonLogo: `mr-4 flex object-cover`,
+    companyName: `text-lg font-bold flex flex-1 pl-10 items-center mt-[20px]`,
+    setNickname: `text-lg font-bold flex flex-1 items-center mt-[20px] mb-[20px] text-white`,
   };
 
   //
