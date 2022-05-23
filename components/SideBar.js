@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React from "react";
-
+import Link from "next/link";
+import logo from "../assets/amazon_logo.png";
+import logoFull from "../assets/amazon_logo_full.png";
+//
 import { ConnectButton } from "web3uikit";
 //
 //
@@ -64,6 +67,18 @@ const SideBar = () => {
           <ConnectButton />
         </div>
         {/* ----- */}
+      </div>
+      <div className={styles.menu}>
+        <Link href="/">
+          <div className={styles.menuItem}>
+            <Image
+              src={logo}
+              height={30}
+              width={30}
+              className={styles.amazonLogo}
+            />
+          </div>
+        </Link>
       </div>
     </div>
   );
