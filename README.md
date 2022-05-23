@@ -563,3 +563,25 @@ const username = "plop";
                 <button className={styles.setNickname}>Set Nickname</button>
               </>
 ```
+
+<br>
+<br>
+
+#### Now what we want to do is that when we log in, we want that to show that <u>we are logged in as a USER</u>
+
+<br>
+
+- 1 Log in to metamask and Moralis through our app, by clicking **connect**, then log you out **metamask**
+
+- 2 Go to **Moralis** and delete any user that is logged in
+
+🔴 (there is a trick, delete the first row, as if you delete the 2 row it will not work)
+
+<br>
+
+<br>
+
+[<img src="./img-read/loginbasic1.gif"/>]()
+
+<br>
+<br>
