@@ -416,3 +416,68 @@ const SideBar = () => {
 
 export default SideBar;
 ```
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+# 🐖
+
+### Context
+
+- We will create all the variables and functions inside the context, **with the context we will be able to call the variables functions anywhere in the app** by making them global
+
+<br>
+
+#### Create the folder context
+
+- Inside the root folder, create a folder and call it **context**
+
+<br>
+
+- Inside the **context folder** create a component and call it **AmazonContext.js**
+
+<br>
+
+<br>
+
+#### import the following
+
+```javascript
+import { createContext, useState, useEffect } from "react";
+import { useMoralis, useMoralisQuery } from "react-moralis";
+import { amazonAbi, amazonCoinAddress } from "../lib/constants";
+import { ethers } from "ethers";
+```
+
+<br>
+<br>
+
+```javascript
+// 1
+export const AmazonContext = createContext();
+//
+// 2
+export const AmazonProvider = ({ children }) => {
+  //
+  //
+  return (
+    // 3
+    <AmazonContext.Provider
+      value={
+        {
+          /* everything that is going to be 
+            wrapped here
+ is going to be global  */
+        }
+      }
+    >
+      {children}
+    </AmazonContext.Provider>
+  );
+};
+```
