@@ -496,7 +496,9 @@ export const AmazonProvider = ({ children }) => {
 
 <br>
 
-- Import the **context** as **AmazonProvider**
+- ✋ Import the **context** as **AmazonProvider**
+
+<br>
 
 > As you can see below, we are bringing the data from the other component we just created, the one containing the context.
 
@@ -506,11 +508,11 @@ import { AmazonProvider } from "../context/AmazonContext";
 
 <br>
 
-#### Now wrap the content inside the amazon provider
+### Now wrap the content inside the amazon provider
 
 <br>
 
-> As you can see, inside the AmzonProvider we have the MoralisProvider containing the **enviroments keys**
+> As you can see, inside the AmazonProvider, we have the MoralisProvider containing the **enviroments keys** and also our component
 
 ```javascript
 // ✋
@@ -523,4 +525,41 @@ import { AmazonProvider } from "../context/AmazonContext";
   </MoralisProvider>
 </AmazonProvider>
 // ✋
+```
+
+<br>
+<br>
+
+### So once we do that, we are able to use context within the app
+
+- Go to the **SideBar.js** and replace true for false, the reason for that is because right now its hard coded and we want to make it dynamical by using **Moralis**
+
+```javascript
+const isAuthenticated = false;
+```
+
+<br>
+
+#### Also add the **nickname** here
+
+```javascript
+const nickname = ""; ✋
+const username = "plop";
+```
+
+#### and here
+
+```javascript
+     {!username ? (
+              <>
+                <div className={styles.username}>
+                  <input
+                    type="text"
+                    placeholder="Username...."
+                    className={styles.usernameInput}
+                    value={nickname} ✋
+                  />
+                </div>
+                <button className={styles.setNickname}>Set Nickname</button>
+              </>
 ```

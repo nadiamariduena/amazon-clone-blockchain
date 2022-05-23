@@ -15,8 +15,10 @@ import { ConnectButton } from "web3uikit";
 //
 //
 
-const isAuthenticated = true;
+const isAuthenticated = false;
 //
+//
+const nickname = "";
 const username = "plop";
 //
 //
@@ -64,6 +66,7 @@ const SideBar = () => {
                     type="text"
                     placeholder="Username...."
                     className={styles.usernameInput}
+                    value={nickname}
                   />
                 </div>
                 <button className={styles.setNickname}>Set Nickname</button>
