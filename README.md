@@ -468,11 +468,12 @@ export const AmazonProvider = ({ children }) => {
   return (
     // 3
     <AmazonContext.Provider
+      //4
       value={
         {
           /* everything that is going to be 
-            wrapped here
- is going to be global  */
+            wrapped here "between the curly brackets",
+          is going to be global  */
         }
       }
     >
@@ -480,4 +481,46 @@ export const AmazonProvider = ({ children }) => {
     </AmazonContext.Provider>
   );
 };
+```
+
+<br>
+
+> But before we can pass the values, (in step4) we need to create a couple of things.
+
+<br>
+<br>
+
+## PROVIDER 🌈
+
+### At this point the <u>CONTEXT</u> is set up, all we need to do now is going to the <u>pages/\_app.js</u> ... and wrap the amazon provider we just created.
+
+<br>
+
+- Import the **context** as **AmazonProvider**
+
+> As you can see below, we are bringing the data from the other component we just created, the one containing the context.
+
+```javascript
+import { AmazonProvider } from "../context/AmazonContext";
+```
+
+<br>
+
+#### Now wrap the content inside the amazon provider
+
+<br>
+
+> As you can see, inside the AmzonProvider we have the MoralisProvider containing the **enviroments keys**
+
+```javascript
+// ✋
+<AmazonProvider>
+  <MoralisProvider
+    serverUrl={process.env.NEXT_PUBLIC_MORALIS_SERVER}
+    appId={process.env.NEXT_PUBLIC_MORALIS_APP_ID}
+  >
+    <Component {...pageProps} />
+  </MoralisProvider>
+</AmazonProvider>
+// ✋
 ```

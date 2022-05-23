@@ -11,7 +11,7 @@ export const AmazonProvider = ({ children }) => {
       value={
         {
           /* everything that is going to be 
-            wrapped here
+            wrapped here,
  is going to be global  */
         }
       }
