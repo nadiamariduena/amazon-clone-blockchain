@@ -20,6 +20,8 @@ const SideBar = () => {
     profilePicContainer: `flex  rounded-xl items-center justify-center w-full h-full mb-5`,
     profilePic: `rounded-3xl object-cover`,
     welcome: ` text-md mb-2 font-bold text-2xl text-white`,
+    usernameInput: `bg-transparent border-white border-2 rounded-lg w-[80%] py-2 px-4 text-lg mt-[20px] placeholder:text-white focus:outline-none flex justify-center items-center text-white`,
+    username: `flex items-center w-full justify-center`,
   };
 
   //
@@ -57,46 +59,14 @@ const SideBar = () => {
             )}
           </>
         )}
+        {/* ---- */}
+        <div className={styles.ConnectButton}>
+          <ConnectButton />
+        </div>
+        {/* ----- */}
       </div>
     </div>
   );
 };
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.profile}>
-//         {" "}
-//         {isAuthenticated && (
-//           <>
-//             <div className={styles.profilePicContainer}>
-//               <Image
-//                 alt="profile"
-//                 className={styles.profilePic}
-//                 height={100}
-//                 width={100}
-//               />
-//             </div>
-//             {!username ? (
-//               <>
-//                 <div className={styles.username}>
-//                   <input
-//                     type="text"
-//                     placeholder="Username..."
-//                     className={usernameInput}
-//                   />
-//                 </div>
-//                 <button className={styles.setNickname}>Set Nickname</button>
-//               </>
-//             ) : (
-//               <>
-//                 <div className={styles.welcome}>Welcome jey</div>
-//               </>
-//             )}
-//           </>
-//         )}
-//       </div>
-//     </div>
-//   );
-// };
 
 export default SideBar;

@@ -620,7 +620,7 @@ const SideBar = () => {
 
 <br>
 
-- So here we need and images key with an **object** and a domain with an **array**
+- So here we need and **images key** with an **object** and a **domain key** with an **array**
 
 ```javascript
 /** @type {import('next').NextConfig} */ const nextConfig = {
@@ -695,8 +695,38 @@ module.exports = nextConfig
 [<img src="./img-read/icon-dicebar.gif"/>]()
 
 <br>
+
+> 🌞 So as you can see, if you are authenticated its going to load the image, but keep in mind this is only to mimic an authentication 🌞
+
+<br>
 <br>
 
 ---
 
 <br>
+
+### Add the connectButton
+
+- Its the button we had before we add the whole code related to the avatar.
+
+<br>
+
+```javascript
+       )}
+        {/* ---- */}
+        <div className={styles.ConnectButton}>
+          <ConnectButton />
+        </div>
+        {/* ----- */}
+      </div>
+    </div>
+  );
+};
+
+export default SideBar;
+
+```
+
+<br>
+
+[<img src="./img-read/connectbutton-with-avatar.gif"/>]()
