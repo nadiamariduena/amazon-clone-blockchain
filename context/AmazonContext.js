@@ -64,7 +64,8 @@ export const AmazonProvider = ({ children }) => {
         nickname,
         setNickname,
         username,
-        setUsername,
+        //setUsername, // 🔴 actually we dont need this one as its already in the useEffect, instead pass this:
+        handleSetUsername,
       }}
     >
       {children}

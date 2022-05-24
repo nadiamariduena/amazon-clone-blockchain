@@ -892,13 +892,79 @@ const handleSetUsername = () => {
 </AmazonContext.Provider>
 ```
 
-#### But this is not going to make our app work, and the reason is because <u>to use the context</u>, we need to go back into the <u>sideBar.js</u> and import it
+#### But this is not going to make our app work, and the reason is because to use<u> the context</u>, we need to go back into the <u>sideBar.js</u> and import it
 
 <br>
 
-- Import the context, also delete one of the react imports, as here below you already have **React** so you dont need 2 lines with the same
+- ✋ Import the context, also delete one of the react imports, as here below you already have **React** so you don't need 2 lines with the same
 
 ```javascript
 import React, { useContext } from "react";
 import { AmazonContext } from "../context/AmazonContext";
+//
+```
+
+<br>
+
+#### Now that you imported it, use the hooks
+
+- First thing we are going to do, is to destructure the context:
+
+```javascript
+const {} = useContext();
+```
+
+<br>
+
+- ✋ Now you are going to put inside the parenthesis **what contex** do you want to use, lets pass the amazon context first
+
+```javascript
+const {} = useContext(AmazonContext);
+```
+
+- ✋ Now the question is, from you **amazonContext** what do you want to take?
+
+### if you remember, we have this inside the AmazonContext.js:
+
+```javascript
+<AmazonContext.Provider
+  value={{
+    isAuthenticated,
+    nickname,
+    setNickname,
+    username,
+    //setUsername, // 🔴 actually we dont need this one as its already in the useEffect, instead pass this:
+    handleSetUsername,
+  }}
+>
+  {children}
+</AmazonContext.Provider>
+```
+
+#### So grab the hooks from the code above and add it here below:
+
+```javascript
+const { isAuthenticated, nickname, setNickname, username, handleSetUsername } =
+  useContext(AmazonContext);
+```
+
+#### 🔴 At this point you will have an error, the error is because you have 2 times the isAuthenticated, like so:
+
+```javascript
+
+const isAuthenticated = true; ✋
+const nickname = "";
+const username = "";
+//
+// hooks from the context
+const {
+  isAuthenticated, ✋
+   nickname,
+   setNickname, username,
+   handleSetUsername,
+   } = useContext(AmazonContext);
+//
+const SideBar = () => {
+  //
+  //
 ```

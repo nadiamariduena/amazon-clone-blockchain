@@ -20,11 +20,12 @@ import { ConnectButton } from "web3uikit";
 //
 
 const isAuthenticated = true;
-//
-//
 const nickname = "";
 const username = "";
 //
+// hooks from the context
+const { isAuthenticated, nickname, setNickname, username, handleSetUsername } =
+  useContext(AmazonContext);
 //
 const SideBar = () => {
   //
