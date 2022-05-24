@@ -643,13 +643,15 @@ const [nickname, setNickname] = useState("");
 
 ```javascript
 const {
-  authenticate, ✋
-  isAuthenticated, ✋
+  authenticate,
+  isAuthenticated,
   enableWeb3,
   Moralis,
   user,
   isWeb3Enabled,
-} = useMoralis();
+} = useMoralis;
+
+//
 ```
 
 <br>
@@ -719,13 +721,66 @@ useEffect(() => {
     //1 this will check if the user is Authenticated
     //  and if its true, it means we are logged in
     if (isAuthenticated) {
-      // 2 if I am log in, I want to make
-      // a variable called:
+      // 2 if I am logge in, I want to make
+      // a variable called, currentname:
       const currentUsername = await user?.get("nichname");
+      // the currentname will carry the data from moralis.
       //3 this is how we will get the nickname
-      // from the moralis database, this question mark
-      // user? is just making sure "if there is a nickname"
+      // from the moralis database, this question mark 'user'? is just making sure "if there is a nickname"
     }
   };
 }, []);
 ```
+
+### Now we are going to use one the States
+
+- So if the user is not logged yet, you will see the text userName but if the user is logged in, you will see a real name, like we had it when we tested it with the dummy data
+
+```javascript
+useEffect(() => {
+  async () => {
+    if (isAuthenticated) {
+      const currentUsername = await user?.get("nichname");
+      //
+      setUsername(currentUsername); ✋
+    }
+  };
+}, []);
+```
+
+<br>
+<br>
+
+# 🌈
+
+## now add this:
+
+#### 1) If any of this 3 variables below change:
+
+```javascript
+//  ✋
+}, [isAuthenticated, user, username]);
+```
+
+#### 2) the useEffect above will run, and while its running, it will run this below:
+
+```javascript
+ if (isAuthenticated) {
+      const currentUsername = await user?.get("nichname");
+      //
+      setUsername(currentUsername); ✋
+    }
+```
+
+<br>
+<br>
+
+### Next, we will create a function where <u>if I were to type</u> for example "nadia" inside the input field, I want it to be accordingly to the data I have in Moralis as right now I have to make it manually , this is why we have been creating all the functions above
+
+<br>
+
+[<img src="./img-read/beforeAuth1.gif"/>]()
+
+<br>
+
+### SO lets do it:

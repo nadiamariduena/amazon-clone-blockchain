@@ -15,11 +15,11 @@ import { ConnectButton } from "web3uikit";
 //
 //
 
-const isAuthenticated = false;
+const isAuthenticated = true;
 //
 //
 const nickname = "";
-const username = "plop";
+const username = "";
 //
 //
 const SideBar = () => {
@@ -62,6 +62,8 @@ const SideBar = () => {
             {!username ? (
               <>
                 <div className={styles.username}>
+                  {/*  */}
+
                   <input
                     type="text"
                     placeholder="Username...."
