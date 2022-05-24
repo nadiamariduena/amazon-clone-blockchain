@@ -753,31 +753,28 @@ useEffect(() => {
 
 # 🌈
 
-## now add this:
+### SetNickname
 
-#### 1) If any of this 3 variables below change:
+#### 1) now add this: If any of this 3 variables below change:
 
 ```javascript
 //  ✋
 }, [isAuthenticated, user, username]);
 ```
 
-#### 2) the useEffect above will run, and while its running, it will run this below:
+#### 2) the useEffect from step 1 will run, and while its running, it will run this below, which is authenticating..checking if we already have a username:
 
 ```javascript
  if (isAuthenticated) {
-      const currentUsername = await user?.get("nichname");
+      const currentUsername = await user?.get("nickname");
       //
       setUsername(currentUsername); ✋
     }
 ```
 
 <br>
-<br>
 
-### Next, we will create a function where <u>if I were to type</u> for example "nadia" inside the input field, I want it to be accordingly to the data I have in Moralis as right now I have to make it manually , this is why we have been creating all the functions above
-
-- SO once we get the nickname from moralis, that is the equivalent of me adding the name inside the "" like in the image, but if the user dont have a nickname yet **he will see an empty input field** like you see below
+#### Next we will create a function that if we were to type "nadia" inside the input field, I want to be able to click set Nickname (like you see it in the img below | when there is no name inside the input, you can notice, you have the option of clicking in the set Nickname, but not if there is already a name)
 
 <br>
 
@@ -787,4 +784,72 @@ useEffect(() => {
 
 ### So lets do it:
 
-- Lets make it dynamically
+- Lets make it dynamically, for now we will console log a "there is not user" in case there is not user
+
+<br>
+
+```javascript
+const handleSetUsername = () => {
+  if (user) {
+    // if there is a user, i want something to run
+  } else {
+    // if there is not user...
+    console.log("there is not user");
+  }
+};
+```
+
+<br>
+
+##### 🥭
+
+#### But we will also add another conditional inside the conditional from above
+
+<br>
+
+- With this one, we will check **if** the **user** has a **nickname**
+
+```javascript
+const handleSetUsername = () => {
+  if (user) {
+    // if there is a user, i want something to run
+    // but also if the user has a nickname...
+    if (nickname) {
+    }
+  } else {
+    // if there is not user...
+    console.log("there is not user");
+  }
+};
+```
+
+<br>
+<br>
+
+#### So what its going to happen here:
+
+- in step 1, its going to check if there is an user connected to our app
+
+<br>
+
+- in the 2 step, its going to check if there is something in the input field
+
+<br>
+
+- in the 3 step, its going to add a column in our **moralis** database (we have rows and columns), the column is going to be called **nickname** , then its going to store (in moralis), the name you add in the input as the **nickname**
+
+```javascript
+const handleSetUsername = () => {
+  // 1
+  if (user) {
+    // 2
+    if (nickname) {
+      // 3
+      user.set(`nickname`, nickname);
+    }
+  } else {
+    // if there is not user...
+    console.log("there is not user");
+  }
+};
+```
