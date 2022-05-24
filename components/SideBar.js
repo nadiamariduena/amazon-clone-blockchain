@@ -1,5 +1,9 @@
+// context
+import React, { useContext } from "react";
+import { AmazonContext } from "../context/AmazonContext";
+
+//
 import Image from "next/image";
-import React from "react";
 import Link from "next/link";
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
@@ -95,6 +99,7 @@ const SideBar = () => {
               height={30}
               width={30}
               className={styles.amazonLogo}
+              alt="img"
             />{" "}
             My Amazon <br /> board
           </div>

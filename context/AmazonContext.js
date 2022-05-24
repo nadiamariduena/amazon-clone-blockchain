@@ -59,11 +59,13 @@ export const AmazonProvider = ({ children }) => {
   //
   return (
     <AmazonContext.Provider
-      value={
-        {
-          //
-        }
-      }
+      value={{
+        isAuthenticated,
+        nickname,
+        setNickname,
+        username,
+        setUsername,
+      }}
     >
       {children}
     </AmazonContext.Provider>

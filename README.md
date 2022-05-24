@@ -862,7 +862,7 @@ const handleSetUsername = () => {
 <AmazonContext.Provider
   value={
     {
-      // ✋ here we will be passing the function we just created
+      // ✋ here we will be passing data from handler function, the one we just created
     }
   }
 >
@@ -875,3 +875,30 @@ const handleSetUsername = () => {
 <br>
 
 ### So lets implement it
+
+- Pass the following:
+
+```javascript
+<AmazonContext.Provider
+  value={{
+    isAuthenticated,
+    nickname,
+    setNickname,
+    username,
+    setUsername,
+  }}
+>
+  {children}
+</AmazonContext.Provider>
+```
+
+#### But this is not going to make our app work, and the reason is because <u>to use the context</u>, we need to go back into the <u>sideBar.js</u> and import it
+
+<br>
+
+- Import the context, also delete one of the react imports, as here below you already have **React** so you dont need 2 lines with the same
+
+```javascript
+import React, { useContext } from "react";
+import { AmazonContext } from "../context/AmazonContext";
+```
