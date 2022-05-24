@@ -777,10 +777,14 @@ useEffect(() => {
 
 ### Next, we will create a function where <u>if I were to type</u> for example "nadia" inside the input field, I want it to be accordingly to the data I have in Moralis as right now I have to make it manually , this is why we have been creating all the functions above
 
+- SO once we get the nickname from moralis, that is the equivalent of me adding the name inside the "" like in the image, but if the user dont have a nickname yet **he will see an empty input field** like you see below
+
 <br>
 
 [<img src="./img-read/beforeAuth1.gif"/>]()
 
 <br>
 
-### SO lets do it:
+### So lets do it:
+
+- Lets make it dynamically
