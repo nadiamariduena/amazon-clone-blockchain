@@ -586,19 +586,23 @@ const username = "plop";
 <br>
 <br>
 
-## useState
+## useState 🍨 hook
 
 - we will use the **useState hook** to keep track of a couple of things
 
 <br>
 
-- First thing we will create is a variable with the state of our **username**, if you recall, we have a **username** inside the **sideBar.js** , so by adding this state with the **username** we will be linking anything that will change to it.
+- First thing we will create is a variable with the state of our **username**, if you recall it, we have a **username** inside the **sideBar.js** , the username controls what the username is, so by adding this state with the **username** we will be linking anything that will change to it.
+
+<br>
+
+> const [username, setUsername] = useState("");
 
 <br>
 
 ```javascript
 
-
+// so this control what our user name is
   const [username, setUsername] = useState(""); ✋
 
   //
@@ -612,3 +616,60 @@ const username = "plop";
 #### so this is going to initialize it as an empty string ('')
 
 > const [username, setUsername] = useState("");
+
+<br>
+
+#### We will do the same with the nickname
+
+```javascript
+const [username, setUsername] = useState("");
+const [nickname, setNickname] = useState("");
+```
+
+<br>
+
+👍 Why its empty like so **("")**? so that the user can have the possibility to insert a username
+
+<br>
+<br>
+
+## useMoralis 🍰 hook
+
+- There are a couple of things we will need to grab from the **useMoralis hook**.
+
+<br>
+
+- We will maybe not use all of them, but what is for sure, is that we will be using is the:
+
+```javascript
+const {
+  authenticate, ✋
+  isAuthenticated, ✋
+  enableWeb3,
+  Moralis,
+  user,
+  isWeb3Enabled,
+} = useMoralis();
+```
+
+<br>
+
+### What we need to do next, is to set up a <u>useEffect</u>
+
+<br>
+
+- This useEffect will help me **everytime I connect to my wallet, I want to retrieve the username or in other words, the "nickname"**from my database
+
+<br>
+
+##### So as we know, the useEffect is going to run in 3 different points:
+
+- When the cycle is **mounting**
+
+- when the component is **updating**
+
+- and when the component will **unmount**
+
+<br>
+
+#### SO with the dependency module, we cant control <u>when we want your side effect tu run</u>

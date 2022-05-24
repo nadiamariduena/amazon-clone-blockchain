@@ -10,7 +10,7 @@ export const AmazonProvider = ({ children }) => {
   //
 
   const [username, setUsername] = useState("");
-
+  const [nickname, setNickname] = useState("");
   //
   //
   return (
