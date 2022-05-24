@@ -3,15 +3,15 @@ import { useMoralis, useMoralisQuery } from "react-moralis";
 // import { amazonAbi, amazonCoinAddress } from "../lib/constants";
 // import { ethers } from "ethers";
 
+// A
 export const AmazonContext = createContext();
 
 export const AmazonProvider = ({ children }) => {
-  //
+  //B
   const [username, setUsername] = useState("");
   const [nickname, setNickname] = useState("");
-  //
-  //
 
+  // C
   const {
     authenticate,
     isAuthenticated,
@@ -22,7 +22,7 @@ export const AmazonProvider = ({ children }) => {
   } = useMoralis;
 
   //
-  //
+  //D
   useEffect(() => {
     async () => {
       if (isAuthenticated) {
@@ -32,7 +32,29 @@ export const AmazonProvider = ({ children }) => {
       }
     };
   }, [isAuthenticated, user, username]);
-
+  //
+  //E
+  const handleSetUsername = () => {
+    // 1
+    if (user) {
+      // 2
+      if (nickname) {
+        // 3
+        user.set(`nickname`, nickname);
+        // 4
+        user.save();
+        // 5
+        setNickname("");
+      } else {
+        // 6
+        console.log("Cant set empty nickname");
+      }
+      //
+    } else {
+      // if there is not user...
+      console.log("there is not user");
+    }
+  };
   //
   //
   return (
