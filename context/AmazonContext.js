@@ -6,6 +6,13 @@ import { createContext, useState, useEffect } from "react";
 export const AmazonContext = createContext();
 
 export const AmazonProvider = ({ children }) => {
+  //
+  //
+
+  const [username, setUsername] = useState("");
+
+  //
+  //
   return (
     <AmazonContext.Provider
       value={

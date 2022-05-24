@@ -575,7 +575,7 @@ const username = "plop";
 
 - 2 Go to **Moralis** and delete any user that is logged in
 
-🔴 (there is a trick, delete the first row, as if you delete the 2 row it will not work)
+🔴 (there is a trick, delete the first row, as if you delete the 2 row, it will not work)
 
 <br>
 
@@ -585,3 +585,30 @@ const username = "plop";
 
 <br>
 <br>
+
+## useState
+
+- we will use the **useState hook** to keep track of a couple of things
+
+<br>
+
+- First thing we will create is a variable with the state of our **username**, if you recall, we have a **username** inside the **sideBar.js** , so by adding this state with the **username** we will be linking anything that will change to it.
+
+<br>
+
+```javascript
+
+
+  const [username, setUsername] = useState(""); ✋
+
+  //
+  //
+  return (
+    <AmazonContext.Provider
+```
+
+<br>
+
+#### so this is going to initialize it as an empty string ('')
+
+> const [username, setUsername] = useState("");
