@@ -13,6 +13,35 @@ export const AmazonProvider = ({ children }) => {
   const [nickname, setNickname] = useState("");
   //
   //
+
+  const {
+    authenticate,
+    isAuthenticated,
+    enableWeb3,
+    Moralis,
+    user,
+    isWeb3Enabled,
+  } = useMoralis();
+
+  //
+  //
+  useEffect(() => {
+    async () => {
+      //1 this will check if the user is Authenticated
+      //  and if its true, it means we are logged in
+      if (isAuthenticated) {
+        // 2 if I am log in, I want to make
+        // a variable called:
+        const currentUsername = await user?.get("nichname");
+        //3 this is how we will get the nickname
+        // from the moralis database, this question mark
+        // user? is just making sure "if there is a nickname"
+      }
+    };
+  }, []);
+
+  //
+  //
   return (
     <AmazonContext.Provider
       value={
