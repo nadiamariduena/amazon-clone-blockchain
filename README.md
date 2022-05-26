@@ -1147,6 +1147,15 @@ export default MyApp;
 ```
 
 <br>
+<br>
+
+---
+
+<br>
+
+### What solved the issue ✔️
+
+<br>
 
 #### 🔴 After correcting those mistakes I verified the code and I rewatched the tutorial a couple of times, but nothing worked..UNTIL i recalled that I ve had similar issues when working with MONGODB.
 
@@ -1161,8 +1170,41 @@ export default MyApp;
 - I followed the same instructions, so once I had the new server, **I copied and paste** the credentials inside my **.env.local** , **after** that **I logged again into Moralis** and then I tried to authenticate myself with my **metamask account** and it worked 🌈
 
 <br>
+
 <br>
 
-#### Now lets test it 🍨
+#### set name anthen verifying if it was created, then Deleting old database
 
-<!-- [<img src="./img-read/beforeAuth1.gif"/>]() -->
+[<img src="./img-read/success-auth-moralis0-dele-old-server-to-make-it-work.gif"/>]()
+
+#### Checking if the name is saved in the database, login and logout to see if it keeps recalling my name 🍨
+
+[<img src="./img-read/success-auth-moralis1.gif"/>]()
+
+<br>
+
+##### TO Summarize:
+
+##### To make it work
+
+- I checked for errors in the code while watching the video tutorial
+
+<br>
+
+- After that **I created a new server** (and deleted the old one)
+
+<br>
+
+- I pasted the credentials related to the new server inside the **.env.local**
+
+<br>
+
+- I logged in moralis
+
+<br>
+
+- **I authenticated** myself through the **connect button** inside our app
+
+<br>
+
+- Once it succesfully authenticated, I checked the **column** inside the **Moralis database**
