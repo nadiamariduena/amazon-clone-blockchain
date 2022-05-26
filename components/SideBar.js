@@ -1,31 +1,17 @@
-// context
 import React, { useContext } from "react";
-import { AmazonContext } from "../context/AmazonContext";
-
-//
-import Image from "next/image";
-import Link from "next/link";
 import logo from "../assets/amazon_logo.png";
 import logoFull from "../assets/amazon_logo_full.png";
-//
-//  ----   ICONS ----
+import Image from "next/image";
 import { FaBox } from "react-icons/fa";
 import { BsFillBookmarkFill } from "react-icons/bs";
 import { BsFillPersonFill } from "react-icons/bs";
-import { AiOutlineHistory } from "react-icons/ai";
-//
-//
+import { AmazonContext } from "../context/AmazonContext";
 import { ConnectButton } from "web3uikit";
+import { AiOutlineHistory } from "react-icons/ai";
+import Link from "next/link";
 //
 //
 
-const isAuthenticated = true;
-const nickname = "";
-const username = "";
-//
-// hooks from the context
-const { isAuthenticated, nickname, setNickname, username, handleSetUsername } =
-  useContext(AmazonContext);
 //
 const SideBar = () => {
   //
@@ -46,13 +32,23 @@ const SideBar = () => {
     companyName: `text-lg font-bold flex flex-1 pl-10 items-center mt-[20px]`,
     setNickname: `text-lg font-bold flex flex-1 items-center mt-[20px] mb-[20px] text-white`,
   };
+  //
+  //
 
+  //
+  // hooks from the context
+  const {
+    isAuthenticated,
+    nickname,
+    setNickname,
+    username,
+    handleSetUsername,
+  } = useContext(AmazonContext);
   //
   //
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
-        hello
         {isAuthenticated && (
           <>
             <div className={styles.profilePicContainer}>
@@ -67,16 +63,20 @@ const SideBar = () => {
             {!username ? (
               <>
                 <div className={styles.username}>
-                  {/*  */}
-
                   <input
                     type="text"
                     placeholder="Username...."
                     className={styles.usernameInput}
                     value={nickname}
+                    onChange={(e) => setNickname(e.target.value)}
                   />
                 </div>
-                <button className={styles.setNickname}>Set Nickname</button>
+                <button
+                  className={styles.setNickname}
+                  onClick={handleSetUsername}
+                >
+                  Set Nickname
+                </button>
               </>
             ) : (
               <div>
@@ -85,14 +85,11 @@ const SideBar = () => {
             )}
           </>
         )}
-        {/* ---- */}
-        <div className={styles.ConnectButton}>
+        <div className={styles.connectButton}>
           <ConnectButton />
         </div>
-        {/* ----- */}
       </div>
       <div className={styles.menu}>
-        {/* amazon */}
         <Link href="/">
           <div className={styles.menuItem}>
             <Image
@@ -101,11 +98,11 @@ const SideBar = () => {
               width={30}
               className={styles.amazonLogo}
               alt="img"
-            />{" "}
-            My Amazon <br /> board
+            />
+            My Amazon
+            <br /> Board
           </div>
         </Link>
-        {/* icons */}
         <div className={styles.menuItem}>
           <FaBox />
           Collections
@@ -118,20 +115,17 @@ const SideBar = () => {
           <BsFillPersonFill />
           Profile
         </div>
-        {/* recent order  HISTORY */}
         <Link href="/history">
           <div className={styles.menuItem}>
             <AiOutlineHistory />
             Transaction History
           </div>
         </Link>
-        {/* company name */}
-        <div className={styles.companyName}>
-          <Image src={logoFull} alt="amazon" height={100} width={100} />
-        </div>
+      </div>
+      <div className={styles.companyName}>
+        <Image src={logoFull} alt="amazon" height={100} width={100} />
       </div>
     </div>
   );
 };
-
 export default SideBar;

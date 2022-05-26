@@ -19,39 +19,31 @@ export const AmazonProvider = ({ children }) => {
     Moralis,
     user,
     isWeb3Enabled,
-  } = useMoralis;
+  } = useMoralis();
 
   //
   //D
   useEffect(() => {
-    async () => {
+    (async () => {
       if (isAuthenticated) {
         const currentUsername = await user?.get("nickname");
-        //
         setUsername(currentUsername);
       }
-    };
+    })();
   }, [isAuthenticated, user, username]);
+  //
   //
   //E
   const handleSetUsername = () => {
-    // 1
     if (user) {
-      // 2
       if (nickname) {
-        // 3
-        user.set(`nickname`, nickname);
-        // 4
+        user.set("nickname", nickname);
         user.save();
-        // 5
         setNickname("");
       } else {
-        // 6
         console.log("Cant set empty nickname");
       }
-      //
     } else {
-      // if there is not user...
       console.log("there is not user");
     }
   };
@@ -64,7 +56,6 @@ export const AmazonProvider = ({ children }) => {
         nickname,
         setNickname,
         username,
-        //setUsername, // 🔴 actually we dont need this one as its already in the useEffect, instead pass this:
         handleSetUsername,
       }}
     >

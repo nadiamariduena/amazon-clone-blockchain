@@ -968,3 +968,201 @@ const SideBar = () => {
   //
   //
 ```
+
+#### So delete this one:
+
+```javascript
+// const isAuthenticated = true;
+// const nickname = "";
+// const username = "";
+//
+// hooks from the context
+const { isAuthenticated, nickname, setNickname, username, handleSetUsername } =
+  useContext(AmazonContext);
+//
+```
+
+#### Now lets add the following 2 lines
+
+```javascript
+     onChange={e => setNickname(e.target.value)}
+    //
+    //
+      onClick={handleSetUsername}
+```
+
+#### Add them here:
+
+```javascript
+{
+  isAuthenticated && (
+    <>
+      <div className={styles.profilePicContainer}>
+        <Image
+          src={`https://avatars.dicebear.com/api/pixel-art/${username}.svg`}
+          alt="profile"
+          className={styles.profilePic}
+          height={100}
+          width={100}
+        />
+      </div>
+      {!username ? (
+        <>
+          <div className={styles.username}>
+            {/*  */}
+
+            <input
+              type="text"
+              placeholder="Username...."
+              className={styles.usernameInput}
+              value={nickname}
+              onChange={(e) => setNickname(e.target.value)} ✋
+            />
+          </div>
+          <button className={styles.setNickname} onClick={handleSetUsername}> ✋
+            Set Nickname
+          </button>
+        </>
+      ) : (
+        <div>
+          <div className={styles.welcome}>Welcome {username}</div>
+        </div>
+      )}
+    </>
+  );
+}
+```
+
+#### Before testing it, go to the AmazonContext.js, it seems like we forgot to add the parenthesis to the Moralis
+
+```javascript
+// Before
+const {
+  authenticate,
+  isAuthenticated,
+  enableWeb3,
+  Moralis,
+  user,
+  isWeb3Enabled,
+} = useMoralis;
+//
+//
+// after
+//
+const {
+  authenticate,
+  isAuthenticated,
+  enableWeb3,
+  Moralis,
+  user,
+  isWeb3Enabled,
+} = useMoralis();
+```
+
+<br>
+<br>
+
+#### 🔴 At this point you will have an error
+
+```javascript
+
+event - compiled client and server successfully in 271 ms (1777 modules)
+error - NoMoralisContextProviderError: Make sure to only call useMoralis within a  <MoralisProvider>
+
+```
+
+<br>
+
+#### the reason, I made Two mistakes, so you have to correct it like so:
+
+#### err 1 🔴
+
+```javascript
+useEffect(() => {
+  async () => {
+    if (isAuthenticated) {
+      const currentUsername = await user?.get("nickname");
+      //
+      setUsername(currentUsername);
+    }
+  };
+}, [isAuthenticated, user, username]);
+```
+
+#### Solution 🌞
+
+```javascript
+useEffect(() => {
+  (async () => {
+    if (isAuthenticated) {
+      const currentUsername = await user?.get("nickname");
+      //
+      setUsername(currentUsername);
+    }
+  })();
+}, [isAuthenticated, user, username]);
+```
+
+#### Err 2
+
+- Here I made the mistake of wrapping the content in the wrong way
+
+```javascript
+//
+function MyApp({ Component, pageProps }) {
+  return (
+    <AmazonProvider>
+      <MoralisProvider
+        serverUrl={process.env.NEXT_PUBLIC_MORALIS_SERVER}
+        appId={process.env.NEXT_PUBLIC_MORALIS_APP_ID}
+      >
+        <Component {...pageProps} />
+      </MoralisProvider>
+    </AmazonProvider>
+  );
+}
+
+export default MyApp;
+```
+
+<br>
+
+#### solution 🌞
+
+```javascript
+function MyApp({ Component, pageProps }) {
+  return (
+    <MoralisProvider
+      serverUrl={process.env.NEXT_PUBLIC_MORALIS_SERVER}
+      appId={process.env.NEXT_PUBLIC_MORALIS_APP_ID}
+    >
+      <AmazonProvider>
+        <Component {...pageProps} />{" "}
+      </AmazonProvider>
+    </MoralisProvider>
+  );
+}
+
+export default MyApp;
+```
+
+<br>
+
+#### 🔴 After correcting those mistakes I verified the code and I rewatched the tutorial a couple of times, but nothing worked..UNTIL i recalled that I ve had similar issues when working with MONGODB.
+
+<br>
+
+- Solution: 🌈
+
+> I created a **new server** ([like you can see in the beginning of the tutorial](https://youtu.be/HMdwbq1JJT0?t=947) )
+
+<br>
+
+- I followed the same instructions, so once I had the new server, **I copied and paste** the credentials inside my **.env.local** , **after** that **I logged again into Moralis** and then I tried to authenticate myself with my **metamask account** and it worked 🌈
+
+<br>
+<br>
+
+#### Now lets test it 🍨
+
+<!-- [<img src="./img-read/beforeAuth1.gif"/>]() -->
