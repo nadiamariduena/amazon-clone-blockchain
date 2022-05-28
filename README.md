@@ -1295,7 +1295,13 @@ export default MyApp;
 
 #### 🔴 I decided to entirely delete the server and create a new one (without having to create another account)
 
-- 👎 It didnt work, Even If I got new credentials and all seemed to start from new, it didnt work
+<br>
+
+- 👎 It didnt work, Even If I got new credentials and all seemed to start from new, it didnt work.
+
+<br>
+
+[<img src="./img-read/oldserver-regenerating-credentials.gif"/>]()
 
 <br>
 
@@ -1308,9 +1314,15 @@ export default MyApp;
 > After looking for a way to completely delete a moralis account (there was nothing), I found that yes, you are going to have issues if you **delete an user** in a wrong way, read more ✋ [here ](https://docs.moralis.io/moralis-dapp/users/delete-user)
 
 <br>
+
+<br>
 <br>
 
-### Back to th next section
+### Back to the next section
+
+- So at this point I created a new account and a new server, now its working again.
+
+<br>
 
 > The whole code after we finish this section:
 
