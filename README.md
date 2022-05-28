@@ -1221,3 +1221,33 @@ export default MyApp;
 
 <br>
 <br>
+
+# 🔴 Warning:
+
+> If you delete the row containing the user, you will have the error above:
+
+<br>
+
+[<img src="./img-read/error-after-deleting-row-containing-user.gif"/>]()
+
+<br>
+
+> I got this error after I deleted the **row** containing the user (with the name)(**as you can see it in the blue dashboard**), it would have been another containing an user with no name. So now I know that this error is because of this
+
+ <br>
+
+[<img src="./img-read/error-after-deleting-row-containing-user2.gif"/>]()
+
+ <br>
+
+#### 🔴 After I decided to test it again, what would happen if I log in with the last row I have in the dashboard? So I logged in with the metamask (not using the button in our app), then I refreshed the page, and as you can see the error is gone
+
+<br>
+
+[<img src="./img-read/error-after-deleting-row-containing-user3.gif"/>]()
+
+<br>
+
+##### 🔴 But there is something wrong, after you see that its apparently logged I decided to click on the connect button in our app, it logged me out and now it appears as I am not logged in, so I clicked again an it seems its logged, I check the dashboard and its logged but somehow it doesnt give me the option to add/set a name, so I deleted most of the stuff you can see on the left side of the dashboard, \_Session, \_EthAdress, everything that could have connection to this user, but nothing.
+
+> Unfortunately, I cannot create more servers because they don't give you more than 3 I think in the beginning so I will try with another email and see how it goes
