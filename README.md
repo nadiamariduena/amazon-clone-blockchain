@@ -738,6 +738,12 @@ useEffect(() => {
 }, []);
 ```
 
+<br>
+
+### [current user](https://docs.moralis.io/moralis-dapp/users/current-user) 🌟
+
+> Click here to understand the following section [current user](https://docs.moralis.io/moralis-dapp/users/current-user)
+
 ### Now we are going to use one the States
 
 - So if the user is not logged yet, you will see the text userName but if the user is logged in, you will see a real name, like we had it when we tested it with the dummy data
@@ -1222,6 +1228,11 @@ export default MyApp;
 <br>
 <br>
 
+---
+
+<br>
+<br>
+
 # 🔴 Warning:
 
 > If you delete the row containing the user, you will have the error above:
@@ -1250,4 +1261,57 @@ export default MyApp;
 
 ##### 🔴 But there is something wrong, after you see that its apparently logged I decided to click on the connect button in our app, it logged me out and now it appears as I am not logged in, so I clicked again an it seems its logged, I check the dashboard and its logged but somehow it doesnt give me the option to add/set a name, so I deleted most of the stuff you can see on the left side of the dashboard, \_Session, \_EthAdress, everything that could have connection to this user, but nothing.
 
-> Unfortunately, I cannot create more servers because they don't give you more than 3 I think in the beginning so I will try with another email and see how it goes
+<br>
+
+> Unfortunately, I cannot create more servers because they don't give you more than 3 (I think in the beginning) ,so I will try with another email and see how it goes
+
+<br>
+
+#### 🌈 So I repeated the same, I created a new account, then I created a new server,(while connected to moralis), I logged in with the <u>connect button</u>in our app, once inside metamask I connected to moralis
+
+> 👍 It worked, I could authenticate again and I checked the blue dashboard to see if the name I added worked, and it worked, I also replaced the name and it worked....THEN I **PURPOSELY deleted** the row again, to see if it gave me the same issue, and YES!!!
+
+#### So now that I now what causes the error, lets see if I can find another solution instead of creating new accounts all the time
+
+<br>
+
+### Restarting the server 👎
+
+- I thought that by restarting the server it will help but It didnt do anything I was expecting
+
+### Changing the details 👎
+
+- Only created a full server **capacity**, then asked me to send an email to moralis to check this issue. (still dont know how could this affect the app, I guess it would mimic an enormous afflux of people using the app, no idea)
+
+<br>
+
+> Here below is the basic setup, in my case after I did the changes above I had **100% of CPU** (marked in red), even if I didnt have any user
+
+<br>
+
+[<img src="./img-read/basic.jpg"/>]()
+
+<br>
+
+#### 🔴 I decided to entirely delete the server and create a new one (without having to create another account)
+
+- 👎 It didnt work, Even If I got new credentials and all seemed to start from new, it didnt work
+
+<br>
+
+- I also tried to delete the cookies to see if it would help, but nothing 👎
+
+<br>
+
+### In conclusion 🔴
+
+> After looking for a way to completely delete a moralis account (there was nothing), I found that yes, you are going to have issues if you **delete an user** in a wrong way, read more ✋ [here ](https://docs.moralis.io/moralis-dapp/users/delete-user)
+
+<br>
+<br>
+
+### Back to th next section
+
+> The whole code after we finish this section:
+
+#### [Code](https://github.com/nadiamariduena/amazon-clone-blockchain/blob/2-Auth-moralis-context/CODE.md)
