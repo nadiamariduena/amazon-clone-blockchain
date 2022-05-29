@@ -149,3 +149,46 @@ so lets setup the **Moralis database**
 ##### one by one
 
 [<img src="./img-read/row2.gif"/>]()
+
+<br>
+
+#### Json
+
+- CReate a json file inside the root directory of your app, call it: **products.js**
+
+<br>
+
+- 🦙 You can add more if your want, but for an example is good enough:
+
+<br>
+
+```javascript
+[
+  {
+    name: "Bricktopianaa",
+    price: "2",
+    src: "https://media2.giphy.com/media/z8n8dWgQ0mgEIyzlmV/giphy.gif?cid=ecf05e4777hi0cj92l99kvubgeb6uy23m0zkpjz3yoh5bmi5&rid=giphy.gif&ct=g",
+  },
+  {
+    name: "RFTFKT Punk",
+    price: "3",
+    src: "https://media3.giphy.com/media/k0IRv7HUUqL3BJqYbI/giphy.gif?cid=790b7611e57a1df68e681f8c94e55c74a684e4b23a5b56df&rid=giphy.gif&ct=g",
+  },
+  {
+    name: "Pineapple",
+    price: "2",
+    src: "https://media1.giphy.com/media/ho0xXatV7b3Fo1ZRXN/giphy.gif?cid=790b7611e22c770ae80d973d82677afdb2bb369ab3b23bc4&rid=giphy.gif&ct=g",
+  },
+];
+```
+
+<br>
+<br>
+
+### Interestig to read and watch
+
+##### [Ultimate NFT Programming Tutorial - FULL COURSE](https://youtu.be/tBMk1iZa85Y)
+
+##### [NFT Programming for Beginners](https://moralis.io/nft-programming-for-beginners/)
+
+##### [Class level permissions](https://docs.moralis.io/moralis-dapp/database/security#class-level-permissions)
