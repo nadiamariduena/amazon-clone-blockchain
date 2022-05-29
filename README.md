@@ -60,3 +60,120 @@ export default function Home() {
 <br>
 
 [<img src="./img-read/main-component.jpg"/>]()
+
+<br>
+
+#### Now lets start implementing the Main.js
+
+- import the **context**
+
+```javascript
+import React, { useContext } from "react";
+import { AmazonContext } from "../context/AmazonContext";
+```
+
+<br>
+
+#### Next, add the following 3 components (hide them because you will have some errors after you add them)
+
+```javascript
+// <Header />
+//   <Featured />
+<Cards />
+```
+
+- In this 3 components we are going to store all the digital **assets**
+
+<br>
+
+#### Add the styles
+
+```javascript
+const styles = {
+  container: `h-full w-full flex flex-col mt-[50px] pr-[50px] overflow-hidden`,
+  recentTitle: `text-2xl font-bold text-center mb-[20px] text-center mt-[40px]`,
+  recentTransactionsList: `flex flex-col`,
+  transactionCard: `flex justify-between mb-[20px] p-[30px] bg-[#42667e] text-white rounded-xl shadow-xl font-bold gap-[20px] text-xl`,
+};
+```
+
+<br>
+
+##### At this point you will have an error, but its because we havent created the _Cards.js_ component
+
+- Go to the components folder and create the Cards.js
+
+- You should have something like this in the Main.js
+
+```javascript
+import React, { useContext, useEffect } from "react";
+import { AmazonContext } from "../context/AmazonContext";
+import Cards from "./Cards";
+
+const Main = () => {
+  //
+  //
+  const styles = {
+    container: `h-full w-full flex flex-col mt-[50px] pr-[50px] overflow-hidden`,
+    recentTitle: `text-2xl font-bold text-center mb-[20px] text-center mt-[40px]`,
+    recentTransactionsList: `flex flex-col`,
+    transactionCard: `flex justify-between mb-[20px] p-[30px] bg-[#42667e] text-white rounded-xl shadow-xl font-bold gap-[20px] text-xl`,
+  };
+  //
+  //
+  return (
+    <div className={styles.container}>
+      {/* <Header />
+      <Featured /> */}
+      <Cards />
+    </div>
+  );
+};
+
+export default Main;
+```
+
+<br>
+
+- ✋ At this point you should be able to see the 'cards' text in your browser
+
+<br>
+
+#### Now add the following to the Cards.js components
+
+<br>
+
+```javascript
+import React, { useContext } from "react";
+import { AmazonContext } from "../context/AmazonContext";
+
+const Cards = () => {
+  //
+  //
+  const styles = {
+    container: `h-full w-full flex flex-col ml-[20px] -mt-[50px]`,
+    title: `text-xl font-bolder mb-[20px] mt-[30px]  ml-[30px]`,
+    cards: `flex items-center  flex-wrap gap-[80px]`,
+  };
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.title}>New Release</div>
+      <div className={styles.cards}>
+        // ✋ here we will be mapping into another component to grab the assets,
+        So for every ASSET we will add a new card component, like so:
+        <Card />✋
+      </div>
+    </div>
+  );
+};
+
+export default Cards;
+```
+
+#### So for every ASSET we will add a new card component, like so:
+
+```javascript
+
+        <Card />✋
+```
