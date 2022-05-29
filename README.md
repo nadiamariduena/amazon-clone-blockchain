@@ -53,3 +53,57 @@ strength: 1024, ownerName: "Aegon", canFly: true
 Keys must be alphanumeric strings. Values can be strings, numbers, booleans, or even arrays and dictionaries - anything that can be JSON-encoded.
 
 ##### Each Moralis.Object is an instance of a specific subclass with a class name that you can use to distinguish different sorts of data. For example, we could call the object a LegendaryMonster.
+
+##### [Read More here](https://docs.moralis.io/moralis-dapp/database/objects#moralis.object)
+
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
+### Lets get started! 🔥
+
+#### <u>Moralis database</u> is build on top of MongoDb (read the text above)
+
+<br>
+
+so lets setup the **Moralis database**
+
+- In Order to pull our assets from the database, we need to first add the assets to Moralis Database.
+
+#### steps:
+
+- Click on the + button
+
+<br>
+
+- It will open a small window ( Add new class, create a new collection of objects), so as you can see, **YOU CAN CREATE a new class**
+
+<br>
+
+- Select the class that you need, as you can notice, all the classes it offers us are already in our rows in the blue dashboard, but there is a **custom option**
+
+<br>
+
+- Once you choose **custom option**, call it **assets**
+
+<br>
+
+### Columns
+
+#### Next 🍭
+
+- Once you create the class, Add the fields for the assets by creating **COLUMNS** 👍
+
+[<img src="./img-read/creatingClass-in-moralis-also-creatingColumn.gif"/>]()
+
+<br>
+
+- Here we will add the **src** column that will store the images
+
+[<img src="./img-read/creatingClass-in-moralis-also-creatingColumn2.gif"/>]()
+
+### Rows
