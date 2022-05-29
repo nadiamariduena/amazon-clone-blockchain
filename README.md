@@ -182,6 +182,30 @@ so lets setup the **Moralis database**
 ];
 ```
 
+> In the tutorial they didnt explain how to add it through json file, but I think I found something that could help me in the future, ✋ [here in this](https://youtu.be/tBMk1iZa85Y) tutorial, you can see that to add the **json data** of the products (with the img's etc) you need to do it through the **smart** contract and using the **mainnet server** 🔴 which I think is the
+
+<br>
+
+##### What Is a Mainnet In Cryptocurrency?
+
+A mainnet is a blockchain that performs the functionality of transferring a digital currency from a sender to a recipient. **Mainnet is simply the main network, whereby actual transactions take place on a distributed ledger**.
+
+<br>
+
+In contrast, a **testnet is a test network whereby Decentralized applications and EDCCs get tested and developed**.
+
+<br>
+
+✋ I also found this:
+
+### JSON RPC
+
+<br>
+
+> Click on the "HTTP" tab and copy the link for the mainnet (or your desired environment). It will look something like this:
+
+[](https://docs.moralis.io/speedy-nodes/connecting-to-rpc-nodes/connect-to-avalanche-node#json-rpc)
+
 <br>
 <br>
 
@@ -192,3 +216,10 @@ so lets setup the **Moralis database**
 ##### [NFT Programming for Beginners](https://moralis.io/nft-programming-for-beginners/)
 
 ##### [Class level permissions](https://docs.moralis.io/moralis-dapp/database/security#class-level-permissions)
+
+<br>
+<br>
+
+# 🌈
+
+#### Showing the assets in our App
