@@ -244,3 +244,20 @@ See how it works here [Web3UI Kit](https://github.com/web3ui/web3uikit)
 - [momentjs.com](https://momentjs.com)
 
 - [git moment](https://github.com/moment/moment)
+
+<br>
+<br>
+
+---
+
+<br>
+
+<br>
+
+### Interestig to read and watch
+
+##### [Ultimate NFT Programming Tutorial - FULL COURSE](https://youtu.be/tBMk1iZa85Y)
+
+##### [NFT Programming for Beginners](https://moralis.io/nft-programming-for-beginners/)
+
+##### [Class level permissions](https://docs.moralis.io/moralis-dapp/database/security#class-level-permissions)
