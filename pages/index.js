@@ -1,3 +1,4 @@
+import Main from "../components/Main";
 import SideBar from "../components/SideBar";
 
 const styles = {
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <SideBar />
-      {/* <Main />   */}
+      <Main />
     </div>
   );
 }
