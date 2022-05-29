@@ -7,11 +7,9 @@
 
 #### Ckeck the Documents here: [docs ✋](./DOCS.md)
 
-<br>
+#### The whole code (after we finish this section):
 
-#### The whole code after we finish this section:
-
-[Code](https://github.com/nadiamariduena/amazon-clone-blockchain/blob/2-Auth-moralis-context/CODE.md)
+##### [Code](https://github.com/nadiamariduena/amazon-clone-blockchain/blob/2-Auth-moralis-context/CODE.md)
 
  <br>
  <br>
@@ -1235,15 +1233,19 @@ export default MyApp;
 
 # 🔴 Warning:
 
-> If you delete the row containing the user, you will have the error above:
+- I will repeat the same error to see if I can find a reason why its happening.
 
 <br>
 
 [<img src="./img-read/error-after-deleting-row-containing-user.gif"/>]()
 
+#### If you delete the row containing the user (the user we created and added a nickname), you will have the error <u>above</u>
+
 <br>
 
-> I got this error after I deleted the **row** containing the user (with the name)(**as you can see it in the blue dashboard**), it would have been another containing an user with no name. So now I know that this error is because of this
+#####
+
+> I got this error after I deleted the **row** containing the user (with the name)(**as you can see it in the blue dashboard**), it would have been another row "containing an user with no name" So now I know that this error is because of this.
 
  <br>
 
@@ -1251,7 +1253,9 @@ export default MyApp;
 
  <br>
 
-#### 🔴 After I decided to test it again, what would happen if I log in with the last row I have in the dashboard? So I logged in with the metamask (not using the button in our app), then I refreshed the page, and as you can see the error is gone
+#### 🔴 After I decided to test it again, what would happen if I log in with the last row I have in the dashboard?
+
+> So I logged in with the **metamask** (not using the button in our app), then I refreshed the page, and as you can see the error is gone
 
 <br>
 
@@ -1259,19 +1263,33 @@ export default MyApp;
 
 <br>
 
-##### 🔴 But there is something wrong, after you see that its apparently logged I decided to click on the connect button in our app, it logged me out and now it appears as I am not logged in, so I clicked again an it seems its logged, I check the dashboard and its logged but somehow it doesnt give me the option to add/set a name, so I deleted most of the stuff you can see on the left side of the dashboard, \_Session, \_EthAdress, everything that could have connection to this user, but nothing.
+### 🔴 But there is something wrong..
 
 <br>
 
-> Unfortunately, I cannot create more servers because they don't give you more than 3 (I think in the beginning) ,so I will try with another email and see how it goes
+> After I checked if it was logged, I decided to click on the connect button in our app, it logged me out and now it appears as I am not logged in, so I clicked again an it seems as if I was logged, I checked the dashboard and its logged, but somehow it doesnt give me the option to add/set a name, so **I deleted most of the stuff you can see on the left side of the dashboard, \_Session, \_EthAdress, etc** everything that could have connection to this user, but nothing. 👎
 
 <br>
 
-#### 🌈 So I repeated the same, I created a new account, then I created a new server,(while connected to moralis), I logged in with the <u>connect button</u>in our app, once inside metamask I connected to moralis
+> Unfortunately, I cannot create more servers because they don't give you more than 3 (I think in the beginning) ,so I will try with another email and see how it goes **(I wrote them and they told me to purchase it, sorry but I dont buy stuff like this from the beginning)**
 
-> 👍 It worked, I could authenticate again and I checked the blue dashboard to see if the name I added worked, and it worked, I also replaced the name and it worked....THEN I **PURPOSELY deleted** the row again, to see if it gave me the same issue, and YES!!!
+<br>
 
-#### So now that I now what causes the error, lets see if I can find another solution instead of creating new accounts all the time
+### Created a new account again
+
+#### 🌈 So I repeated the same, I created a new account, then I created a new server,(while connected to moralis), I logged in with the <u>connect button</u>in our app, once inside metamask, I logged into moralis.
+
+<br>
+
+- 🔴 (dont forget to always connect with the button and from there connect to moralis, but this option of moralis in metamask will only work, if your are connected already to Moralis )
+
+<br>
+
+> 🎆 It worked, I could authenticate again and I checked the blue dashboard to see if the name I added worked, and it worked, I also replaced the name and it worked....THEN I **PURPOSELY deleted** the row again, to see if it gave me the same issue, and **YES**!!! once again I got the same issue 💯
+
+<br>
+
+##### So now that I know what causes the error, lets see if I can find another solution instead of creating new accounts all the time.
 
 <br>
 
@@ -1311,7 +1329,7 @@ export default MyApp;
 
 ### In conclusion 🔴
 
-> After looking for a way to completely delete a moralis account (there was nothing), I found that yes, you are going to have issues if you **delete an user** in a wrong way, read more ✋ [here ](https://docs.moralis.io/moralis-dapp/users/delete-user)
+> After looking for a way to completely delete a moralis account (there was nothing), I found that yes, you are going to have issues if you **delete an user** in a wrong way, read more ✋ [here | Moralis Documentation ](https://docs.moralis.io/moralis-dapp/users/delete-user)
 
 <br>
 
