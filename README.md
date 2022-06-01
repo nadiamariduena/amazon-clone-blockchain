@@ -201,3 +201,17 @@ export default Cards;
 <br>
 
 </details>
+
+<br>
+
+#### Paid courses
+
+> I decided to pay for an NFT course, and I think it was a great idea, yes it's a bit expensive but its worth it!! 👍
+
+<br>
+
+- [blockchain](https://oxford.esmelearning.com/pages/oxford-blockchain-strategy-2?utm_source=g&utm_medium=paid_search&utm_campaign=OXF-BCH+|+Search+|+Tier+3+Countries+|+Non-Brand&utm_term=blockchain%20online%20course&utm_device=c_&utm_placement=&utm_content=Course+-+Broad&gclid=Cj0KCQjwnNyUBhCZARIsAI9AYlE65XjAAflYImQHf6wcjR4KDkufUPzt8zcLy3JiqO61wp1tepHzmQoaApPcEALw_wcB)
+
+<br>
+
+- [Best NFT Courses Online 2022](https://www.courselounge.com/nft-courses-online/)
