@@ -19,7 +19,24 @@
  <br>
  <br>
 
-# 🥭
+#### 🔴 Pause
+
+> I will pause this tutorial until I learn how to create smart contracts for this type of projects **(I am already doing it)**
+
+ <br>
+ <br>
+
+---
+
+ <br>
+ <br>
+
+# 🚧 in progress
+
+<details>
+<summary>This is what I have until now</summary>
+
+<br>
 
 <!--
 [<img src="./img-read/amazon-logo.gif"/>]() -->
@@ -171,9 +188,16 @@ const Cards = () => {
 export default Cards;
 ```
 
+<br>
+<br>
+
 #### So for every ASSET we will add a new card component, like so:
 
 ```javascript
 
         <Card />✋
 ```
+
+<br>
+
+</details>
