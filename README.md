@@ -21,7 +21,7 @@
 
 #### 🔴 Pause
 
-> I will pause this tutorial until I learn how to create smart contracts for this type of projects **(I am already doing it)**
+> I will pause this tutorial until I learn how to create smart contracts for this type of projects **(I am in process of doing it)**, as the creator of the tutorial ignored this part.
 
  <br>
  <br>
